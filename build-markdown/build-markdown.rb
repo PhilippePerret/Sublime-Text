@@ -8,6 +8,10 @@
   de produire le fichier HTML ou le fichier PDF avec la commande
   CMD-B
 
+  TODO
+    * Pouvoir prendre la première balise h1 pour créer le titre
+      du document (ou trouver la balise)
+
 =end
 
 require 'kramdown'
@@ -40,7 +44,7 @@ HTML_DEST_PATH = file_with_ext('html')
 puts "\n*** Production du fichier #{FORMAT_PDF ? 'PDF' : 'HTML'} ***"
 
 # 
-# Un rappel
+# Un rappel de la syntaxe markdown étendue par kramdown
 # 
 puts "\nRappel de syntaxe Kramdown"
 puts "--------------------------"
@@ -60,6 +64,7 @@ if File.exists?(file_with_ext('erb'))
   file_with_ext('erb')
 else
   puts "On peut créer un modèle HTML avec un fichier #{AFFIXE}.erb contenant '<%= @body %>'."
+  puts "Pour le titre, voir le template de ce dossier (ci-dessous)"
   puts "Puisqu'il n'est pas défini, je prends 'template.erb' dans mon dossier (#{__dir__})."
   File.join(__dir__,'template.erb')
 end
