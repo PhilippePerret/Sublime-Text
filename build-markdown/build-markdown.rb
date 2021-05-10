@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/local/opt/ruby/bin/ruby
 # encoding: UTF-8
 # frozen_string_literal: true
 
@@ -9,8 +9,8 @@
   CMD-B
 
   TODO
-    * Pouvoir prendre la première balise h1 pour créer le titre
-      du document (ou trouver la balise)
+    * Tester tous les cas : avec fichier .css, avec fichier .sass,
+      avec template .erb.
 
 =end
 
